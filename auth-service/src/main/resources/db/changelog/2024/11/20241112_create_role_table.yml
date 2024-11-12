@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: thourie
+      changes:
+        - createTable:
+            tableName: Role
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: userRole
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+        - createIndex:
+            indexName: idx_userRole
+            tableName: Role
+            columns:
+              - column:
+                  name: userRole
