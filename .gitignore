@@ -1,0 +1,15 @@
+#gradle
+.gradle
+
+#target directories
+build/
+!gradle/wrapper/gradle-wrapper.jar
+**/build
+**/target
+**/logs
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
